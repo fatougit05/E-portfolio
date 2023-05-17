@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nfatou Ba |Welcome to my e-portoflio</title>
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("kKB4_wFYzdlMJ-r9n");
+   })();
+</script>
+</head>
+<body>
+    <section id = "landing-page" onmousemove="moveBackground(event)"> 
+<nav>
+    <figure>
+        <img   id="personal-logo"src="./assets/personal-logo.PNG" alt="">
+    </figure>
+    <ul class ="nav__link--list">
+<li class = "nav__link">
+<a href="#" class="
+nav__link--anchor
+link__hover-effect
+link__hover-effect--black"> About
+</a>
+
+</li>
+
+<li class = "nav__link">
+    <a href="#projects" class="
+    nav__link--anchor
+    link__hover-effect
+    link__hover-effect--black"> Projects
+    </a>
+    
+    </li>
+    <li class = "nav__link" onclick="toggleModal()">
+        <a href="#" class="
+        nav__link--anchor
+        link__hover-effect
+        link__hover-effect--black"> Contact
+        </a>
+        
+        </li>
+        <li class = "nav__link click--butt1" onclick="toggleContrast()">
+            <a href="#" class="
+            nav__link--anchor"> <i class="fas fa-adjust"></i>
+            </a>
+            
+            </li>  
+    </ul>
+</nav>
+<header class="header">
+<div class="header__content">
+<h1 class="title">Hey</h1>
+<h1 class="title title--secondary"><strong class="text--lavender">I'm Fatou.</strong>  </h1>
+<p class="header__para">
+I'm a <strong class="text--lavender"> Front-End Software Engineer</strong>  with a strong dedication to build powerful web applications 
+  that are useful for the world. 
+   Here is a bit more <strong class="text--lavender" onclick="toggleModal()">about me.</strong>
+
+</p>
+
+    <div class = "icons--container">
+        <a href= "https://www.linkedin.com/in/ndeye-fatou-ba-34139b251/" target="_blank" class="icons__link click">
+            <i class="fab fa-linkedin "></i></a>
+        <a href="https://github.com/fatougit05" class="icons__link click">
+            <i class="fab fa-github "></i></a>
+        <a href= "https://docs.google.com/document/d/13XVRN8_nO7B1uK-49qN5MBzlb8C6XKlh8yXlxhgmnGU/edit#"  target="_blank" class="icons__link click">
+            <i class="fas fa-file "></i></a>
+   
+</div>
+</div>
+
+
+</header>
+<button class="mail__btn click" onclick="toggleModal()">
+    <i class="fas fa-envelope"></i>
+</button>
+<a href="" class="scroll">
+    <div class="scroll__icon click"></div>
+</a>
+<div class="modal">
+    <div class="modal__half modal__about">
+<h3 class="modal__title">Here is a bit more about me.</h3>
+<h4 class="modal__sub-title modal__subtitle--about"> Front-End Software Engineer.
+
+</h4>
+<p class="modal__para">
+    I am a 18 year-old Senegalese <span class="text--lavender">Front-End software engineer </span> and free-lancer with a strong dedication to build powerful web applications that are useful for the world.I enjoy learning and to constantly increase my knowledge of the art of programming.
+    <br>
+   
+    Here is my <span class="text--lavender"> technology stack:</span>
+</p>
+<div class="modal__languages">
+ <figure class="modal__language">
+    <img class="modal__language--img" src="./assets/css.png" alt="">
+<span class="language__name">
+    CSS
+</span>
+</figure>
+
+
+
+    <figure class="modal__language">
+    <img class="modal__language--img" src="./assets/js.png" alt="">
+    <span class="language__name">
+        JavaScript
+    </span>
+    </figure>
+    <figure class="modal__language">
+    <img  class="modal__language--img" src="https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png" alt="">
+    <span class="language__name">
+        NextJS
+    </span>
+    </figure>
+
+    <figure class="modal__language">
+    <img class="modal__language--img" src="./assets/react.png" alt="">
+    <span class="language__name">
+        React
+    </span>
+ </figure> 
+ <figure class="modal__language">
+    <img class="modal__language--img" src= "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3254474/typescript-icon-icon-md.png" alt="">
+    <span class="language__name">
+        TypeScript
+    </span>
+ </figure>
+    <figure class="modal__language">
+    <img class="modal__language--img" src="./assets/html.png" alt="">
+    <span class="language__name">
+        HTML
+    </span>
+    </figure>
+</div>
+</div>
+
+   
+    <div class="modal__half modal__contact">
+<h3 class="modal__title modal__title--contact">Let's have a chat .
+</h3>
+<h4 class="modal__title modal__sub-title--contact">I'm opened to new opportunities and I would love to hear from you.</h4>
+<form id = "contact__form" onsubmit="contact(event)">
+<div class="form__item">
+    <label class="form__item--label" >Name</label>
+    <input class="input"  name ="user_name" type="text" required></input>
+
+</div>
+<div class="form__item">
+    <label class="form__item--label" >Email</label>
+    <input class="input"  name ="user_email" type="email" required></input>
+</div>
+<div class="form__item">
+    <label class="form__item--label">Message</label>
+    <textarea class="input"  name ="message" type="text" required></textarea>
+</div>
+<button id="contact__submit" class="form__submit">Send it my way</button>
+</form>
+
+<div class="modal__overlay modal__overlay--loading">
+<i class="fas fa-spinner"></i>
+</div>
+<div class="modal__overlay modal__overlay--sucess">
+Thanks for the message! Looking forward to speaking with you soon!
+</div>
+<i class="fas fa-times modal__exit" onclick="toggleModal()"></i>
+</div>
+
+</div>
+
+</div>
+<img src="./assets/semi circle.svg" class="shape shape--0" >
+<img src="./assets/circle.svg" class="shape shape--1" >
+<img src="./assets/squiggly.svg" class="shape shape--2" >
+<img src="./assets/circle.svg" class="shape shape--3" >
+<img src="./assets/triangle.svg" class="shape shape--4" >
+<img src="./assets/circle.svg" class="shape shape--5" >
+<img src="./assets/squiggly.svg" class="shape shape--6" >
+<img src="./assets/circle.svg" class="shape shape--7" >
+<img src="./assets/semi circle.svg" class="shape shape--8" >
+    </section>
+
+<section id="projects">
+<div class="container">
+    <div class="row">
+    <h2 class="section__title">Here are some of my <strong class="text--lavender click--butt1">projects</strong> </h2>
+<ul class="project__list">
+
+    <li class="project"></li>
+    <div class="project__wrapper">
+        <img src="./assets/chatgpt-clone.png" class = "project__img" alt="">
+        <div class="project__wrapper--bg">
+        <div class="project__description">
+            <h3 class="project__description--title">
+AI App : ChatGPT Messenger Clone           
+ </h3>
+            <h4 class="project__description--subtitle">
+              NEXT JS, TypeScript , Tailwind Css , FireBase , NextAuth
+            </h4>
+            <p class="project__description--para">
+             By fetching OPENAI's API , I built a responsive  AI search engine where users can directely ask questions to CHATGPT
+             .Used NextAuth to make the user log In in order to start a new  chat , stored the users's chats using firebase and used SSR(Server Side Rendering) for better SEO performance.
+            </p>
+            <div class="project__description--links">
+                <a href="https://github.com/fatougit05/chatGPT-clone" class="project__description--link"><i class="fab fa-github "></i>
+                
+                </a>
+                <a href="https://chat-gpt-clone-nine-blue.vercel.app/" class="project__description--link"> <i class="fas fa-link"></i></a> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <li class="project"></li>
+    <div class="project__wrapper">
+        <img src="./assets/amazon.png" class = "project__img" alt="">
+        <div class="project__wrapper--bg">
+        <div class="project__description">
+            <h3 class="project__description--title">
+            Amazon Clone
+            </h3>
+            <h4 class="project__description--subtitle">
+              NextJs, TypeScript,NextAuth,Firebase, Stripe ,TailWind CSS
+            </h4>
+            <p class="project__description--para">
+                Created a full stack responsive Amazon-Clone with functionalities such as NextAuth . Fetched Data from fakestoreAPI to display dynamically the products.
+                Implemented basket checkout and fee calculation features using Redux.Added Stripe payment integration to process payments when the user is logged in and redirect the users to the sucess Page.
+            </p>
+            <div class="project__description--links">
+                <a href="https://github.com/fatougit05/new-amazon-clone/" class="project__description--link"><i class="fab fa-github "></i></a>
+                <a href="https://new-a-clone-qjirb6svp-fatougit05.vercel.app/" class="project__description--link"> <i class="fas fa-link"></i></a> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <li class="project"></li>
+    <div class="project__wrapper">
+        <img src="./assets/nft.png" class = "project__img" alt="">
+        <div class="project__wrapper--bg">
+        <div class="project__description">
+            <h3 class="project__description--title">
+          NFT MarketPlace 
+            </h3>
+            <h4 class="project__description--subtitle">
+            ReactJS, Bootstrap & CSS 
+            </h4>
+            <p class="project__description--para">
+                Transformed a completely static HTML, CSS, JavaScript and React single page application into an interactive user interface using animations, transitions and carousels
+                Processed API requests with Axios to dynamically represent data from a cloud server and represented it through skeleton loading states, pagination and dynamic routing
+                
+                
+            </p>
+            <div class="project__description--links">
+                <a href="https://github.com/fatougit05/nfatou-internship" class="project__description--link"><i class="fab fa-github "></i></a>
+                <a href="https://nft-marketplace-ochre-zeta.vercel.app" class="project__description--link"> <i class="fas fa-link"></i></a> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <li class="project"></li>
+    <div class="project__wrapper">
+        <img src="./assets/aot.png" class = "project__img" alt="">
+        <div class="project__wrapper--bg">
+        <div class="project__description">
+            <h3 class="project__description--title">
+Attack On Titan Anime : Search Engine
+            </h3>
+            <h4 class="project__description--subtitle">
+              NextJs ,TailWind CSS , ReactJS
+            </h4>
+            <p class="project__description--para">
+              Created an API with data related to the anime series "Attack on Titan".Fetched  data from the api to dynamically represent data on the Front-End.
+          Implemented features such as a search engine where users can search episodes by characters, by episode duration and by episodes, a filter engine that filters episodes by seasons , and characters by their name,and added a Skeleton Loading state for better user experience .
+          Finally ,added in the landing page a feature which each time an user refreshes the page ,renders another character different from the previous one.
+            </p>
+            <div class="project__description--links">
+                <a href="https://github.com/fatougit05/aot-for-fans/" class="project__description--link"><i class="fab fa-github "></i></a>
+                <a href="https://aot-for-fans.vercel.app" class="project__description--link"> <i class="fas fa-link"></i></a> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+</ul>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+    <div class="row footer__row">
+<figure>
+    <img  class="footer__logo--img" src="./assets/personal-logo.PNG" alt="">
+</figure>
+<div class="footer__social--list">
+<a href="" class="
+footer__social--link
+link__hover-effect
+link__hover-effect--white">Github</a>
+    <a href="" class="
+    footer__social--link
+    link__hover-effect
+    link__hover-effect--white">LinkedIn</a>
+    <a href="" class="
+    footer__social--link
+    link__hover-effect
+    link__hover-effect--white">Email</a>
+    <a href="" class="
+    footer__social--link
+    link__hover-effect
+    link__hover-effect--white">Resume</a>
+</div>
+<div class="footer__copyright">
+    Copyright  © 2022 Fatou Ba
+</div>
+</div>
+</div>
+</footer>
+
+
+    
+</body>
+</html>
